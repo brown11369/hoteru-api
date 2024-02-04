@@ -1,0 +1,32 @@
+{
+  "name": "hoteru",
+  "version": "1.0.0",
+  "description": "Hotel Food Ordering System, a streamlined solution for hotels to enhance the guest dining experience.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brown11369/hoteru-api.git"
+  },
+  "keywords": [
+    "hotel",
+    "rooms",
+    "food"
+  ],
+  "author": "brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brown11369/hoteru-api/issues"
+  },
+  "homepage": "https://github.com/brown11369/hoteru-api#readme",
+  "dependencies": {
+    "date-fns": "^3.3.1",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "uuid": "^9.0.1"
+  }
+}
