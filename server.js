@@ -10,6 +10,9 @@ const cookieParser = require("cookie-parser");
 const dbConnect = require("./config/dbConnect");
 const mongoose = require("mongoose");
 const adminRoute = require("./routes/adminRoute");
+const recipeRoute = require("./routes/recipeRoute");
+const roomRoute = require("./routes/roomRoute");
+const blogRoute = require("./routes/blogRoute");
 const refreshHandler = require("./controllers/refreshController");
 const logoutController = require("./controllers/logoutController");
 
@@ -37,7 +40,9 @@ app.use(cookieParser())
 app.get("/refresh", refreshHandler)
 app.get("/system-logout", logoutController)
 app.use("/admin", adminRoute)
-
+app.use("/recipes", recipeRoute)
+app.use("/rooms", roomRoute)
+app.use("/blogs", blogRoute)
 
 
 // ---------Routes---------

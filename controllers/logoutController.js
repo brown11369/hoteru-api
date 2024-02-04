@@ -14,7 +14,7 @@ const logoutController = async (req, res) => {
 
         foundUser.refreshToken = "",
             foundUser.save()
-        res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true })
+        res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: false })
         res.status(200).send({ success: true, message: "you are logged out" })
 
     }

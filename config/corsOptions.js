@@ -4,7 +4,7 @@ const allowedOrigins=require("./allowedOrigins");
 const corsOptions = {
     origin: (origin, callback) => {
         // remove !origin deployment time
-        if (allowedOrigins?.indexOf(origin) !== -1) {
+        if (allowedOrigins?.indexOf(origin) !== -1 || !origin) {
             callback(null, true)
         }
         else {
