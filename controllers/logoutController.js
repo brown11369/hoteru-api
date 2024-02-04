@@ -8,13 +8,13 @@ const logoutController = async (req, res) => {
         const refreshToken = cookies?.jwt
         const foundUser = await adminModel.findOne({ refreshToken: refreshToken })
         if (!foundUser) {
-            res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: false })
+            res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true })
             return res.sendStatus(204)      //success:OK but no content
         }
 
         foundUser.refreshToken = "",
             foundUser.save()
-        res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: false })
+        res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true })
         res.status(200).send({ success: true, message: "you are logged out" })
 
     }
