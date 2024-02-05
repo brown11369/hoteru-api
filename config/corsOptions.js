@@ -1,4 +1,4 @@
-const allowedOrigins=require("./allowedOrigins");
+const allowedOrigins = require("./allowedOrigins");
 
 // Cross Origin Resource Sharing(CORS)
 const corsOptions = {

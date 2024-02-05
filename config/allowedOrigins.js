@@ -1,8 +1,8 @@
 const allowedOrigins = [
-    "http://mysite.com",
-    "http://127.0.0.1:5500",
-    "http://localhost:8000",
-    "https://www.google.com"
+    process.env.ORIGIN1,
+    process.env.ORIGIN2,
+    process.env.ORIGIN3,
+    process.env.ORIGIN4
 ]
 
 module.exports = allowedOrigins;

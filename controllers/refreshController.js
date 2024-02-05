@@ -1,5 +1,4 @@
 const adminModel = require("../model/adminModel")
-
 const jwt = require("jsonwebtoken")
 
 const refreshHandler = async (req, res) => {
